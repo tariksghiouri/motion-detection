@@ -1,10 +1,10 @@
-# Motion Extraction Thingy
+# Motion Extraction
 
 So I was bored on Sunday before ftour and made this thing.
 
 ## What it does
 
-Shows moving stuff in videos while making everything else gray. That's it.
+Shows moving stuff in videos while making everything else gray.
 
 I saw [this post](https://www.instagram.com/p/DD8JRDjywHv) and thought "let me make that".
 

@@ -15,8 +15,21 @@ def extract_motion(video_path, output_path=None, offset_frames=1,
     print(f"Video info: {width}x{height}, {fps} fps, {total_frames} frames")
     
     if output_path:
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        fourcc = cv2.VideoWriter_fourcc(*'avc1')  # Use 'avc1' for H.264 codec
         out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+        
+        if not out.isOpened():
+            print("Failed to create video writer with avc1 codec.")
+            print("Trying alternative codec (XVID)...")
+            
+            # Try XVID as fallback (requires .avi)
+            avi_path = output_path.rsplit('.', 1)[0] + '.avi'
+            fourcc = cv2.VideoWriter_fourcc(*'XVID')
+            out = cv2.VideoWriter(avi_path, fourcc, fps, (width, height))
+            
+            if not out.isOpened():
+                print("Failed to create video writer. Please try a different output format.")
+                return
     
     frame_buffer = []
     

@@ -56,3 +56,13 @@ numpy
 - Cars driving by
 - People walking
 - Sunsets, rain
+## Example
+
+### Original Video
+
+https://github.com/user-attachments/assets/080512ca-82e9-4b40-adb5-511537082e35
+
+### Motion Extracted
+
+https://github.com/user-attachments/assets/ff203542-4b1d-4abf-83da-4f721456783a
+
